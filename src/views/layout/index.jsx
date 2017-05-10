@@ -80,10 +80,11 @@ class Layout extends React.Component {
   render () {
     let { sidebar: { action } } = this.state,
         supportedRoute = true
-    const aSR = [...supportedRoutes()]
+    const aSR = [...supportedRoutes()],
+          pathName = window.location.pathname
 
     supportedRoute = isInArray(aSR, window.location.pathname)
-
+    
     return (
       <div className="wrapper">
 
@@ -97,9 +98,9 @@ class Layout extends React.Component {
             navClose={this.navClose.bind(this)}
           />
 
-          { window.location.pathname === '/' ? <Route path='/' component={Content}/> : null }
-          { window.location.pathname === '/comics' ? <Route path='/comics' component={Content}/> : null }
-          { window.location.pathname === '/characters' ? <Route path='/characters' component={Content}/> : null }
+          { pathName === '/marvelous/' ? <Route path='/' component={Content}/> : null }
+          { pathName === '/marvelous/comics' ? <Route path='/comics' component={Content}/> : null }
+          { pathName === '/marvelous/characters' ? <Route path='/characters' component={Content}/> : null }
           { supportedRoute === false ? <Route path='/*' component={Page404}/> : null }
 
 

@@ -1,7 +1,7 @@
 .page-not-found {
   margin-top: calc(3em + 11px);
   height: calc(100% - (6em + 22px));
-  background-image: url('/images/page-not-found.jpg');
+  background-image: url('../../../public/images/page-not-found.jpg');
   background-color: #fff;
   position: relative;
 }

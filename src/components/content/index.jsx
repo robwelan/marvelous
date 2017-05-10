@@ -79,7 +79,6 @@ class Content extends React.Component {
 
   componentDidMount () {
     const { engine } = this.state
-
     let oEngine = {}
 
     if (isEmpty(this.props.engine.node)) {

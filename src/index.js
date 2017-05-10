@@ -43,7 +43,7 @@ const middleware = routerMiddleware(history),
 ReactDOM.render (
   <Provider store={store}>
 
-    <Router>
+    <Router basename="/marvelous">
       <div>
 
         <App />

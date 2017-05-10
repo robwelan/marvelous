@@ -4,7 +4,7 @@ const
         getComics: {
           method: 'GET',
           endpoint: '/v1/public/comics',
-          route: '/',
+          route: '/marvelous/',
           fields: {
             heading: {
               label: 'Title',
@@ -43,7 +43,7 @@ const
         getCharacters: {
           method: 'GET',
           endpoint: '/v1/public/characters',
-          route: '/characters',
+          route: '/marvelous/characters',
           fields: {
             heading: {
               label: 'Name',
@@ -88,7 +88,7 @@ const
           return false
         }
       },
-      
+
       supportedRoutes = _ => {
         let oNode = {},
             aSR = []

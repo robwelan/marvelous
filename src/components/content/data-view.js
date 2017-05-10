@@ -2,12 +2,16 @@ import React from 'react'
 import { DataList } from './data-list'
 import { PageNav } from '../page-nav'
 import { MarvelAttribution } from '../marvel-attribution'
+import { relativePath } from '../../helpers/git-pages-relative-path-helper'
 
 const DataView = (props) => {
+
+
+
   if (props.show.loading === true) {
     return (
       <div className="loading">
-        <img src="images/spiderman-knitting.gif" alt="Spiderman Knitting" className="loading-image" />
+        <img src={`${relativePath()}/images/spiderman-knitting.gif`} alt="Spiderman Knitting" className="loading-image" />
       </div>
     )
   }

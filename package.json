@@ -27,5 +27,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://robwelan.github.io/marvelous/"
+  "homepage": "https://robwelan.github.io/marvelous"
 }

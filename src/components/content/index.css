@@ -142,7 +142,7 @@
 }
 
 .no-data-found {
-  background-image: url("/images/captain-america-bummed.gif");
+  background-image: url('../../../public/images/captain-america-bummed.gif');
   background-color: #fff;
   height: 100%;
   -webkit-background-size: cover;
