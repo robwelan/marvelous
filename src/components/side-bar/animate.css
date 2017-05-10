@@ -1,0 +1,122 @@
+/* OPEN */
+.side-bar-enter {
+  transform: translate(-100%);
+}
+
+.side-bar-enter.side-bar-enter-active {
+  transform: translate(0%);
+  transition: transform 700ms ease-in-out;
+}
+
+.side-bar-leave {
+  transform: translate(0%);
+}
+
+.side-bar-leave.side-bar-leave-active {
+  transform: translate(-100%);
+  transition: transform 700ms ease-in-out;
+}
+
+.side-bar-appear {
+  transform: translate(-100%);
+
+  background-position: -300px 100vh;
+}
+
+.side-bar-appear.side-bar-appear-active {
+  transform: translate(0%);
+  transition: transform 700ms ease-in-out;
+
+  background-image: url("../../../public/images/greenlantern-mkvsdc-white.jpg");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: all ease 2s;
+	-moz-transition: all ease 2s;
+	-o-transition: all ease 2s;
+	-ms-transition: all ease 2s;
+	transition: all ease 2s;
+}
+
+
+.content-enter {
+  opacity: 0;
+}
+
+.content-enter.content-enter-active {
+  opacity: 0.6;
+  transition: opacity 700ms ease-in-out;
+}
+
+.content-leave {
+  opacity: 0;
+}
+
+.content-leave.content-leave-active {
+  opacity: 0.6;
+  transition: opacity 700ms ease-in;
+}
+
+.content-appear {
+  opacity: 0;
+}
+
+.content-appear.content-appear-active {
+  opacity: 0.6;
+  transition: opacity 700ms ease-in;
+}
+
+/* CLOSE */
+.no-side-bar-enter {
+  transform: translate(0%);
+}
+
+.no-side-bar-enter.no-side-bar-enter-active {
+  transform: translate(-100%);
+  transition: transform 700ms ease-in-out;
+}
+
+.no-side-bar-leave {
+  transform: translate(0%);
+}
+
+.no-side-bar-leave.no-side-bar-leave-active {
+  transform: translate(-100%);
+  transition: transform 700ms ease-in-out;
+}
+
+.no-side-bar-appear {
+  transform: translate(0%);
+}
+
+.no-side-bar-appear.no-side-bar-appear-active {
+  transform: translate(-100%);
+  transition: transform 700ms ease-in-out;
+}
+
+.no-content-enter {
+  opacity: 0.6;
+}
+
+.no-content-enter.no-content-enter-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.no-content-leave {
+  opacity: 0.6;
+}
+
+.no-content-leave.no-content-leave-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
+.no-content-appear {
+  opacity: 0.6;
+}
+
+.no-content-appear.no-content-appear-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}

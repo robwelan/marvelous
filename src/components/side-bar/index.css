@@ -1,0 +1,77 @@
+/* Drawer Menu Background */
+.drawer-menu {
+  background-image: url("../../../public/images/greenlantern-mkvsdc-white.jpg");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-transition: all ease 1s;
+	-moz-transition: all ease 1s;
+	-o-transition: all ease 1s;
+	-ms-transition: all ease 1s;
+	transition: all ease 1s;
+}
+.drawer-menu-items {
+  padding: 40px 10px 20px 10px;
+}
+.drawer-menu-items ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+.drawer-menu-items ul > li {
+  font-size: 1em;
+}
+.drawer-menu-items ul > li a {
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom: 1px solid #222;
+}
+.drawer-menu-items ul > li a.active {
+  box-shadow: inset 5px 0 0 #C6C600, inset 6px 0 0 #222;
+  background: rgba(126, 126, 126, .4);
+}
+.drawer-menu-overlay {
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+/* Drawer Menu */
+.drawer-menu {
+  height: 100vh;
+  width: 300px;
+  background-color: white;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.drawer-menu-close {
+  font-size: 1.5em;
+  margin: 10px;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 11;
+}
+.drawer-body {
+  height: 100vh;
+  width: 100vw;
+  background: #CCC;
+  filter: alpha(opacity=60);
+  /* IE */
+  -moz-opacity: 0.6;
+  /* Mozilla */
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}

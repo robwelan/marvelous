@@ -1,0 +1,41 @@
+.page-not-found {
+  margin-top: calc(3em + 11px);
+  height: calc(100% - (6em + 22px));
+  background-image: url('/images/page-not-found.jpg');
+  background-color: #fff;
+  position: relative;
+}
+
+.page-not-found-info {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  background-color: rgba(255, 255, 255, .8);
+  border-top-left-radius: 20px;
+}
+
+.page-not-found-info p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin-bottom: 10px;
+}
+
+.page-not-found-info a:link {
+    text-decoration: none;
+}
+
+.page-not-found-info a:visited {
+    text-decoration: none;
+}
+
+.page-not-found-info a:hover {
+    text-decoration: underline;
+}
+
+.page-not-found-info a:active {
+    text-decoration: underline;
+}
