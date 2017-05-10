@@ -7,7 +7,7 @@ const DataView = (props) => {
   if (props.show.loading === true) {
     return (
       <div className="loading">
-        <img src="/images/spiderman-knitting.gif" alt="Spiderman Knitting" className="loading-image" />
+        <img src="images/spiderman-knitting.gif" alt="Spiderman Knitting" className="loading-image" />
       </div>
     )
   }
