@@ -2,6 +2,9 @@
  *  https://developer.marvel.com/
  *
  *  Thanks!
+ *
+ *  NOTE: normally one would not place api keys in the public arena.
+ *        These items are usually hidden behind an oauth authentication proxy.
  */
  
 const
