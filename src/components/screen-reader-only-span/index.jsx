@@ -18,12 +18,7 @@ const ScreenReaderOnlySpan = props => {
     }
 
     aClasses.push('sr-only')
-
-    if (aClasses.length === 1) {
-      sClasses = aClasses[0]
-    } else {
-      sClasses = aClasses.join(' ')
-    }
+    sClasses = aClasses.join(' ').trim()
 
   return (
     <span className={sClasses}>{props.label}</span>
