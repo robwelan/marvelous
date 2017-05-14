@@ -14,6 +14,7 @@ export default class SearchBar extends React.Component {
 
     this.handleClear = this.handleClear.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
   handleChange = event => {
@@ -29,6 +30,14 @@ export default class SearchBar extends React.Component {
       inputs: {
         search: ''
       }
+    }
+  }
+
+  handleKeyPress = (e) => {
+    const { inputs } = this.state
+
+    if (e.key === 'Enter') {
+      this.props.startSearch(e, {search: inputs.search})
     }
   }
 
@@ -53,6 +62,7 @@ export default class SearchBar extends React.Component {
                 value={this.state.inputs.search || ''}
                 placeholder={this.props.engine.node.search.placeholder}
                 onChange={this.handleChange}
+                onKeyPress={this.handleKeyPress}
               />
 
               </span>
