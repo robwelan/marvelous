@@ -21,10 +21,11 @@ const history = createHistory()
 
 // Import our App
 import App from './App'
+import { relativePath } from './helpers/git-pages-relative-path-helper'
 
 //import our Styles
 import './index.css'
-
+console.log( relativePath() )
 const middleware = routerMiddleware(history),
 
       composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose,
@@ -43,7 +44,7 @@ const middleware = routerMiddleware(history),
 ReactDOM.render (
   <Provider store={store}>
 
-    <Router basename="/marvelous">
+    <Router basename={relativePath()}>
       <div>
 
         <App />

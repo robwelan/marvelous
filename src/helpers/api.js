@@ -1,10 +1,12 @@
+import { relativePath } from './git-pages-relative-path-helper'
+
 const
       marvelEndPoints = {
 
         getComics: {
           method: 'GET',
           endpoint: '/v1/public/comics',
-          route: '/marvelous/',
+          route: `${relativePath()}/`,
           fields: {
             heading: {
               label: 'Title',
@@ -43,7 +45,7 @@ const
         getCharacters: {
           method: 'GET',
           endpoint: '/v1/public/characters',
-          route: '/marvelous/characters',
+          route: `${relativePath()}/characters`,
           fields: {
             heading: {
               label: 'Name',

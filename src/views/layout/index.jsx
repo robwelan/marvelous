@@ -8,6 +8,8 @@ import { Page404 } from '../../components/404'
 
 import { supportedRoutes } from '../../helpers/api'
 import { isInArray } from '../../helpers/in-array'
+//import { relativePath } from '../../helpers/git-pages-relative-path-helper'
+
 import './index.css'
 
 const menuTransition = 700 // milliseconds
@@ -72,11 +74,6 @@ class Layout extends React.Component {
     }, menuTransition)
   }
 
-  // { window.location.pathname === '/' ? <Route path='/' component={Content}/> : null }
-  // { window.location.pathname === '/comics' ? <Route path='/comics' component={Content}/> : null }
-  // { window.location.pathname === '/characters' ? <Route path='/characters' component={Content}/> : null }
-  //
-
   render () {
     let { sidebar: { action } } = this.state,
         supportedRoute = true
@@ -84,7 +81,7 @@ class Layout extends React.Component {
           pathName = window.location.pathname
 
     supportedRoute = isInArray(aSR, window.location.pathname)
-    
+
     return (
       <div className="wrapper">
 
@@ -101,6 +98,11 @@ class Layout extends React.Component {
           { pathName === '/marvelous/' ? <Route path='/' component={Content}/> : null }
           { pathName === '/marvelous/comics' ? <Route path='/comics' component={Content}/> : null }
           { pathName === '/marvelous/characters' ? <Route path='/characters' component={Content}/> : null }
+
+          { pathName === '/' ? <Route path='/' component={Content}/> : null }
+          { pathName === '/comics' ? <Route path='/comics' component={Content}/> : null }
+          { pathName === '/characters' ? <Route path='/characters' component={Content}/> : null }
+
           { supportedRoute === false ? <Route path='/*' component={Page404}/> : null }
 
 
