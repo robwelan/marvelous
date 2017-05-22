@@ -2,6 +2,12 @@
   margin-top: calc(3em + 11px);
   height: calc(100% - (6em + 22px));
   background-image: url('../../../public/images/page-not-found.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #fff;
   position: relative;
 }

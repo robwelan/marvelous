@@ -1,14 +1,13 @@
 // from https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 
 import createHistory from 'history/createBrowserHistory'
 
-import { routerReducer, routerMiddleware } from 'react-router-redux'
+import { routerReducer, routerMiddleware, ConnectedRouter } from 'react-router-redux'
 
 // Import our app specific reducers
 import * as reducers from './redux/global-state'
@@ -16,17 +15,15 @@ import * as reducers from './redux/global-state'
 // Import our redux thunk middleware
 import ReduxThunk from 'redux-thunk'
 
-// Create history
-const history = createHistory()
-
 // Import our App
 import App from './App'
 import { relativePath } from './helpers/git-pages-relative-path-helper'
 
 //import our Styles
 import './index.css'
-console.log( relativePath() )
-const middleware = routerMiddleware(history),
+
+const history = createHistory({ basename: relativePath() }),
+      middleware = routerMiddleware(history),
 
       composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose,
 
@@ -43,15 +40,9 @@ const middleware = routerMiddleware(history),
 
 ReactDOM.render (
   <Provider store={store}>
-
-    <Router basename={relativePath()}>
-      <div>
-
+    <ConnectedRouter history={history}>
         <App />
-
-      </div>
-    </Router>
-
+      </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 )
